@@ -5524,6 +5524,12 @@ static void read_local_oob_ext_data_complete(struct hci_dev *hdev, u8 status,
 
 	BT_DBG("%s status %u", hdev->name, status);
 
+        // init variables to keep gcc from complaining
+	h192 = NULL;
+	r192 = NULL;
+	h256 = NULL;
+	r256 = NULL;
+
 	cmd = pending_find(MGMT_OP_READ_LOCAL_OOB_EXT_DATA, hdev);
 	if (!cmd)
 		return;
