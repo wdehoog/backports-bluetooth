@@ -264,7 +264,7 @@ EXPORT_SYMBOL_GPL(pcie_capability_clear_and_set_dword);
  *	Returns a node pointer if found, with refcount incremented, use
  *	of_node_put() on it when done.
  *	Returns NULL if node is not found.
- */
+ * /
 struct device_node *of_get_child_by_name(const struct device_node *node,
 				const char *name)
 {
@@ -276,5 +276,6 @@ struct device_node *of_get_child_by_name(const struct device_node *node,
 	return child;
 }
 EXPORT_SYMBOL_GPL(of_get_child_by_name);
+*/
 #endif /* (LINUX_VERSION_CODE < KERNEL_VERSION(3,7,0)) */
 #endif /* CONFIG_OF */
